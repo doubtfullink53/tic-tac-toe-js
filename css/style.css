@@ -1,0 +1,111 @@
+:root {
+  --bs-body-line-height: 1;
+}
+
+body {
+  background-color: rgb(5, 5, 5);
+  font-weight: 900;
+  font-family: "Courier New", Courier, monospace;
+}
+.game-name {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 3rem;
+}
+.announcement::before{
+  content: "\00a0 ";
+}
+
+
+#play-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 4.5% 4.5% !important;
+  background-color: rgb(244, 245, 196);
+
+  border-radius: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 2px 2px;
+  grid-template-areas:
+    "first second third"
+    "fourth fifth sixth"
+    "seven eight nine";
+}
+.first {
+  grid-area: first;
+}
+.second {
+  grid-area: second;
+}
+.third {
+  grid-area: third;
+}
+.fourth {
+  grid-area: fourth;
+}
+.fifth {
+  grid-area: fifth;
+}
+.sixth {
+  grid-area: sixth;
+}
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+.nine {
+  grid-area: nine;
+}
+
+.grid-item {
+  flex: 1 1 0px;
+  width: 0;
+  border-radius: 10px;
+  background-color: #b8b9b9;
+  color: blue;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 4vw 4vw;
+ 
+  border: 10px solid #b8b9b9;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+.btn-container {
+  padding-top: 20px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .grid-item {
+    flex: 1 1 0px;
+    width: 0;
+    border-radius: 5px;
+    background-color: #b8b9b9;
+    color: blue;
+
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 11vw 11vw;
+
+    border: 10px solid #b8b9b9;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .game-name {
+    display: flex;
+    font-size: 2rem;
+  }
+}
