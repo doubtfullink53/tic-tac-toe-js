@@ -12,8 +12,8 @@ let gameBoard = (() => {
   //   [2, 4, 6],
   // ];
   let gameOver = false;
-  let imageO = ["/images/circle-outline-512.png"];
-  let imageX = ["/images/x-mark-512.png"];
+  let imageO = ["./images/circle-outline-512.png"];
+  let imageX = ["./images/x-mark-512.png"];
 
   return { board, imageO, imageX,  gameOver };
 })();
